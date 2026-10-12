@@ -1319,3 +1319,178 @@ body {
   -webkit-animation-play-state: paused !important;
           animation-play-state: paused !important;
 }
+
+/* BUNNY POSITION */
+.bunny {
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  width: 150px;  /* from 100px: +50% */
+  height: 180px; /* from 120px: +50% */
+  transform: translate(-50%, 150px);
+  opacity: 0;
+  z-index: 10;
+  animation: bunny-come-out 2.5s ease-out 8s forwards;
+  .bunny {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+}
+
+/* Bunny body */
+.bunny-body {
+  position: absolute;
+  width: 58px;
+  height: 70px;
+  left: 22px;
+  bottom: 0;
+  background: #fffaf0;
+  border-radius: 50% 50% 45% 45%;
+  border: 2px solid #e8dfd0;
+}
+
+/* Bunny head */
+.bunny-head {
+  position: absolute;
+  width: 65px;
+  height: 58px;
+  left: 17px;
+  bottom: 45px;
+  background: #fffaf0;
+  border: 2px solid #e8dfd0;
+  border-radius: 50%;
+}
+
+/* Ears */
+.bunny-ear {
+  position: absolute;
+  width: 19px;
+  height: 53px;
+  bottom: 90px;
+  background: #fffaf0;
+  border: 2px solid #e8dfd0;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.ear-left {
+  left: 28px;
+  transform: rotate(-18deg);
+}
+
+.ear-right {
+  left: 58px;
+  transform: rotate(18deg);
+}
+
+/* Eyes */
+.bunny-eye {
+  position: absolute;
+  top: 22px;
+  width: 6px;
+  height: 7px;
+  background: #352b27;
+  border-radius: 50%;
+}
+
+.eye-left {
+  left: 17px;
+}
+
+.eye-right {
+  right: 17px;
+}
+
+/* Nose */
+.bunny-nose {
+  position: absolute;
+  left: 29px;
+  top: 32px;
+  width: 8px;
+  height: 6px;
+  background: #e99aa5;
+  border-radius: 50%;
+}
+
+/* Cheeks */
+.bunny-cheek {
+  position: absolute;
+  top: 34px;
+  width: 11px;
+  height: 6px;
+  background: #f4c4c5;
+  border-radius: 50%;
+}
+
+.cheek-left {
+  left: 7px;
+}
+
+.cheek-right {
+  right: 7px;
+}
+
+/* Tail */
+.bunny-tail {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  right: 5px;
+  bottom: 15px;
+  background: #fffaf0;
+  border: 2px solid #e8dfd0;
+  border-radius: 50%;
+}
+
+/* Bunny comes up from below the grass */
+
+.bunny {
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  width: 100px;
+  height: 120px;
+  transform: translate(-50%, 150px) scale(1.5);
+  transform-origin: bottom center;
+  opacity: 0;
+  z-index: 10;
+  animation: bunny-come-out 2.5s ease-out 8s forwards;
+}
+
+@keyframes bunny-come-out {
+  0% {
+    transform: translate(-50%, 150px) scale(1.6);
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-50%, 0) scale(1.5);
+    opacity: 1;
+  }
+}
+
+/* Bunny hover effect */
+.bunny {
+  cursor: pointer;
+  text-decoration: none;
+  transition: filter 0.3s ease;
+}
+
+/* When the mouse points at the bunny */
+.bunny:hover {
+  filter: drop-shadow(0 0 12px pink)
+          brightness(1.2);
+}
+
+/* Small pop effect */
+.bunny:hover .bunny-head {
+  transform: scale(1.08);
+  transform-origin: center bottom;
+}
+
+

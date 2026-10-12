@@ -1460,7 +1460,7 @@ body {
 
 @keyframes bunny-come-out {
   0% {
-    transform: translate(-50%, 150px) scale(1.6);
+    transform: translate(-50%, 150px) scale(0.9);
     opacity: 0;
   }
 
